@@ -1,3 +1,1 @@
-#!/usr/bin/sh
-
-/usr/bin/env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCREEN_SCALE_FACTORS=[1.0] /usr/bin/gzclient $@
+env QT_AUTO_SCREEN_SCALE_FACTOR=0 QT_SCREEN_SCALE_FACTORS=[1.0] gzclient "$@"

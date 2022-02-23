@@ -1,0 +1,70 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1645433236,
+        "narHash": "sha256-4va4MvJ076XyPp5h8sm5eMQvCrJ6yZAbBmyw95dGyw4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7f9b6e2babf232412682c09e57ed666d8f84ac2d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": [
+          "wafer",
+          "utils"
+        ],
+        "nixpkgs": [
+          "wafer",
+          "nixpkgs"
+        ],
+        "wafer": "wafer"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1644229661,
+        "narHash": "sha256-1YdnJAsNy69bpcjuoKdOYQX0YxZBiCYZo4Twxerqv7k=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3cecb5b042f7f209c56ffd8371b2711a290ec797",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "wafer": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1645572340,
+        "narHash": "sha256-JfFq6gGAunK9p7h+T0dwrV3SVOc1T0v5+AhrFgPdiRM=",
+        "owner": "zoenglinghou",
+        "repo": "wafer",
+        "rev": "27ac301546813b470110e9c2fd7387c77456024a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zoenglinghou",
+        "ref": "main",
+        "repo": "wafer",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
