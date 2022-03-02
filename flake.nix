@@ -18,17 +18,10 @@
         gazebo_wrapper_src = builtins.readFile ./gazebo;
         gzclient_wrapper_src = builtins.readFile ./gzclient;
         gazebo_wrapper = (pkgs.writeShellScriptBin gazebo_wrapper_name
-          gazebo_wrapper_src).overrideAttrs (old: {
-            buildCommand = ''
-              ${old.buildCommand}
-               patchShebangs $out'';
-          });
+          gazebo_wrapper_src).overrideAttrs
+          (old: { dontPatchShebangs = true; });
         gzclient_wrapper = (pkgs.writeShellScriptBin gzclient_wrapper_name
-          gzclient_wrapper_src).overrideAttrs (old: {
-            buildCommand = ''
-              ${old.buildCommand}
-               patchShebangs $out'';
-          });
+          gzclient_wrapper_src).overrideAttrs (old: { dontPatchShebangs = true; });
       in rec {
         defaultPackage = packages.pname;
         packages.pname = pkgs.symlinkJoin {
